@@ -4,5 +4,11 @@
     <string name="app_name">DentalCare</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string-array name="nav_menu">
+        <item>Search Your Problems</item>
+        <item>Ask query from Doctor</item>
+        <item>Book An Appointment</item>
+        <item>About Doctor</item>
+        <item>Clinic Address</item>
+    </string-array>
 </resources>

@@ -1,24 +1,24 @@
-package com.example.testnav;
-//this is test
-//test 3
+package com.care.dental;
+
+import com.care.dental.events.ToggleNavigation;
+import com.squareup.otto.Subscribe;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.view.View.OnClickListener;
+import android.view.ViewTreeObserver;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
-
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class GlobalNavActivity extends Activity implements OnClickListener {
-	private RelativeLayout  mNavMenuContainer;
+	private RelativeLayout mNavMenuContainer;
 	private LinearLayout mSectionContainer;
 	private Button mNavButton;
 	private GlobalNavAnimation mGlobalNavAnimation;
@@ -37,13 +37,15 @@ public class GlobalNavActivity extends Activity implements OnClickListener {
 		FragmentTransaction ft = fm.beginTransaction();
 		Fragment menuFrag = new GlobalNavMenuFrag();
 		ft.add(R.id.menu_frag_container, menuFrag);
-		
+
 		Fragment sectionFrag = new Section();
 		ft.add(R.id.section_container, sectionFrag);
 		ft.commit();
 
 		mNavButton.setOnClickListener(this);
+		DentalCareApplication.getEventBus().register(this);
 		initializeAnimation();
+
 	}
 
 	private void initializeAnimation() {
@@ -98,5 +100,10 @@ public class GlobalNavActivity extends Activity implements OnClickListener {
 			mGlobalNavAnimation.toggleSliding();
 			break;
 		}
+	}
+
+	@Subscribe
+	public void toggleOnMenuselection(ToggleNavigation tn) {
+		mGlobalNavAnimation.toggleSliding();
 	}
 }

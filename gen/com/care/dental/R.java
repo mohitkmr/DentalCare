@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.testnav;
+package com.care.dental;
 
 public final class R {
     public static final class anim {
@@ -13,6 +13,9 @@ public final class R {
         public static final int filter_slide_out=0x7f040001;
         public static final int other_slide_in=0x7f040002;
         public static final int other_slide_out=0x7f040003;
+    }
+    public static final class array {
+        public static final int nav_menu=0x7f070000;
     }
     public static final class attr {
     }
@@ -28,26 +31,27 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int rohit_pic=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090009;
-        public static final int button1=0x7f090008;
-        public static final int header=0x7f090001;
-        public static final int menu_frag_container=0x7f090006;
-        public static final int menu_frag_container_holder=0x7f090005;
-        public static final int menu_list=0x7f090007;
-        public static final int nav_button=0x7f090002;
-        public static final int section_container=0x7f090004;
-        public static final int section_frag_container_holder=0x7f090003;
-        public static final int section_layout=0x7f090000;
+        public static final int action_settings=0x7f0a0008;
+        public static final int header=0x7f0a0001;
+        public static final int menu_frag_container=0x7f0a0006;
+        public static final int menu_frag_container_holder=0x7f0a0005;
+        public static final int menu_list=0x7f0a0007;
+        public static final int nav_button=0x7f0a0002;
+        public static final int section_container=0x7f0a0004;
+        public static final int section_frag_container_holder=0x7f0a0003;
+        public static final int section_layout=0x7f0a0000;
     }
     public static final class layout {
-        public static final int global_nav_activity=0x7f030000;
-        public static final int global_nav_menu=0x7f030001;
-        public static final int section_frag=0x7f030002;
+        public static final int about_the_doctor=0x7f030000;
+        public static final int global_nav_activity=0x7f030001;
+        public static final int global_nav_menu=0x7f030002;
+        public static final int section_frag=0x7f030003;
     }
     public static final class menu {
-        public static final int nav=0x7f080000;
+        public static final int nav=0x7f090000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
@@ -76,10 +80,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
     }
 }
